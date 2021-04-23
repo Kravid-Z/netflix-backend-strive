@@ -16,7 +16,7 @@ import {
 const server = express();
 const port = process.env.PORT;
 
-server.use(cors(corsOptions));
+// server.use(cors(corsOptions));
 server.use(express.json());
 
 //ROUTES

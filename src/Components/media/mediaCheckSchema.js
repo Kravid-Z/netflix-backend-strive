@@ -11,8 +11,8 @@ import { check } from "express-validator";
 */
 
 export const mediaCheckSchema = [
-    check("title").exists().withMessage("Title is mandatory field!"),
-    check("year").exists().withMessage("Year is mandatory field!"),
-    check("type").exists().withMessage("Type is mandatory field!"),
+    check("Title").exists().withMessage("Title is mandatory field!"),
+    check("Year").exists().withMessage("Year is mandatory field!"),
+    check("Type").exists().withMessage("Type is mandatory field!"),
   ];
   

@@ -1,4 +1,3 @@
-
 const whiteList = [process.env.FE_URL_DEV];
 
 export const corsOptions = {

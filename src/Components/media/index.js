@@ -11,6 +11,7 @@ import { validationResult } from "express-validator";
 import multer from "multer";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
 import { v2 } from "cloudinary";
+import axios from "axios";
 
 const cloudinaryStorage = new CloudinaryStorage({
   cloudinary: v2,
@@ -25,17 +26,29 @@ const router = express.Router();
 //GET movies by query search ? title in netflix-strive-server && OMDB Server
 router.get("/", async (req, res, next) => {
   try {
-    const media = getMedia();
-    if (req.query && req.query.title) {
-      const filteredMedia = media.filter(
-        (m) => m.hasOwnProperty("title") && m.title === req.query.title
-      );
-      if (filteredMedia.length > 0) {
-        res.send(filteredMedia);
-      } else {
+    const media = await getMedia();
+    if (req.query) {
+      if (req.query.title) {
+        const response = await axios.get(
+          `http://www.omdbapi.com/?${process.env.API_KEY_OMDB}&t=${req.query.title}`
+        );
+        const omdbDataTitle = response.data;
+        console.log(omdbDataTitle);
+        const filteredMedia = media.filter(
+          (m) => m.hasOwnProperty("Title") && m.Title === req.query.title
+        );
+        filteredMedia.push(omdbDataTitle);
+        res.status(200).send(filteredMedia);
+      } else if (req.query.search) {
+        const response = await axios.get(
+          `http://www.omdbapi.com/?${process.env.API_KEY_OMDB}&s=${req.query.search}`
+        );
+        const omdbDataSearch = response.data;
+        console.log(omdbDataSearch);
+        res.status(200).send(omdbDataSearch);
       }
     } else {
-      res.send(media);
+      res.status(200).send(media);
     }
   } catch (error) {
     console.log("ERROR in GET", "/media", error);
