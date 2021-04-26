@@ -1,1 +1,26 @@
-[{"Title":"The Lord of the Rings: The Fellowship of the Ring","Year":"2001","Type":"movie","imdbID":"6358183c-c60c-44ff-9708-922f6c44c535","createdAt":"2021-04-23T14:02:20.519Z","updatedAt":"2021-04-23T14:02:20.519Z"},{"Title":"OTHER Lord of the Rings: The Ganster LORD","Year":"2005","Type":"movie","imdbID":"9c1274ba-332d-4d43-a48c-9e9d192713eb","createdAt":"2021-04-23T14:03:48.784Z","updatedAt":"2021-04-23T14:03:48.784Z"},{"Title":"batman","Year":"2005","Type":"movie","imdbID":"cde9ac76-86a5-4cf6-9c13-bf6762f3f3b2","createdAt":"2021-04-23T14:09:14.632Z","updatedAt":"2021-04-23T14:22:20.872Z"}]
+[
+  {
+    "Title": "The Lord of the Rings: The Fellowship of the Ring",
+    "Year": "2001",
+    "Type": "movie",
+    "imdbID": "6358183c-c60c-44ff-9708-922f6c44c535",
+    "createdAt": "2021-04-23T14:02:20.519Z",
+    "updatedAt": "2021-04-23T14:02:20.519Z"
+  },
+  {
+    "Title": "OTHER Lord of the Rings: The Ganster LORD",
+    "Year": "2005",
+    "Type": "movie",
+    "imdbID": "9c1274ba-332d-4d43-a48c-9e9d192713eb",
+    "createdAt": "2021-04-23T14:03:48.784Z",
+    "updatedAt": "2021-04-23T14:03:48.784Z"
+  },
+  {
+    "Title": "batman",
+    "Year": "2005",
+    "Type": "movie",
+    "imdbID": "cde9ac76-86a5-4cf6-9c13-bf6762f3f3b2",
+    "createdAt": "2021-04-23T14:09:14.632Z",
+    "updatedAt": "2021-04-23T14:22:20.872Z"
+  }
+]
